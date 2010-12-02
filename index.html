@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title><%= @property.name %><%= " || #{@webpage.title}" unless @webpage.homepage? %></title>
+    <%= standard_metas_for(@webpage) %>
+    <%= stylesheets_for @webpage, 'styles' %>
+	<%= stylesheets_for(@webpage) %>    
+    <%= javascripts_for(@webpage) %>
+  <%= javascript_file_for @webpage, 'modernizr-1.5.min.js' %>
+  </head>
+  <body>
+    <%= yield %>
+	<script src="/presents/spagworks/designs/javascripts/example.js"></script>
+    <%= google_analytics_for(@website) %>
+  </body>
+</html>
